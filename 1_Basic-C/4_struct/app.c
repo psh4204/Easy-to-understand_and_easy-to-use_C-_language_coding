@@ -9,6 +9,7 @@ void main(void)
     Sihwan.id = "1234567890";
     Sihwan.sex = MAN;
 }
+
 #endif
 
 #ifdef F_POINTER_STRUCT 
