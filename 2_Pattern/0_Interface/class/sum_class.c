@@ -1,11 +1,12 @@
-#include "sum_class.h"
+#include "app.h"
+
 
 static void init(void);
 static void put(int number);
 static void print(void);
 
-// make a instance.
-sum_t this =
+// uhhh... singleton?
+sum_t this = 
 {
     total : 0,
     init : init,
@@ -15,5 +16,15 @@ sum_t this =
 
 static void init(void)
 {
-    
+    this.total = 0;
+}
+
+static void put(int number)
+{
+    this.total += number;
+}
+
+static void print(void)
+{
+    printf("total : %d\n", this.total);
 }
